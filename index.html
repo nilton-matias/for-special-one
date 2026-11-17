@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nilton &amp; Shilsia — A nossa história</title>
+    <meta name="description" content="Uma página só nossa: o nosso tempo, as nossas memórias e o amor que continuamos a construir." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <canvas id="petals" aria-hidden="true"></canvas>
+
+    <div class="gate" id="gate">
+      <p class="script gate-script">Para ti, Madame</p>
+      <h1>A nossa história</h1>
+      <p class="gate-copy">Uma história, várias memórias e um amor que escolho todos os dias.</p>
+      <button type="button" class="btn btn-gold" id="enterBtn">Entrar</button>
+    </div>
+
+    <div class="page">
+      <header class="topbar">
+        <p class="brand" id="brandNames">Nós</p>
+        <nav>
+          <a href="#tempo">Tempo</a>
+          <a href="#carta">Carta</a>
+          <a href="#fotos">Fotos</a>
+          <a href="#amor">O nosso amor</a>
+        </nav>
+        <button type="button" class="music-btn" id="musicBtn" aria-label="Tocar música" hidden>
+          <span class="music-icon">♪</span>
+        </button>
+      </header>
+
+      <main>
+        <section class="hero" id="inicio">
+          <div class="cover" id="cover">
+            <img id="coverImg" alt="Nós" fetchpriority="high" decoding="async" />
+            <div class="cover-shade"></div>
+            <div class="cover-copy">
+              <p class="eyebrow">Desde que o nosso namoro começou</p>
+              <h1 class="script" id="coupleNames">Nós</h1>
+            </div>
+          </div>
+
+          <div class="counter" id="counter" aria-live="polite">
+            <div class="unit"><strong id="years">0</strong><span>anos</span></div>
+            <div class="unit"><strong id="months">0</strong><span>meses</span></div>
+            <div class="unit"><strong id="days">0</strong><span>dias</span></div>
+            <div class="unit"><strong id="hours">0</strong><span>horas</span></div>
+            <div class="unit"><strong id="minutes">0</strong><span>min</span></div>
+            <div class="unit"><strong id="seconds">0</strong><span>seg</span></div>
+          </div>
+          <p class="since" id="sinceLabel"></p>
+          <p class="hero-line" id="heroLine"></p>
+        </section>
+
+        <section class="section extras" id="tempo">
+          <div class="section-head">
+            <p class="eyebrow">Cada segundo conta</p>
+            <h2>O nosso tempo, em números</h2>
+          </div>
+          <div class="extras-grid">
+            <ul class="stats" id="stats">
+              <li class="stat">
+                <strong id="statMoons">0</strong>
+                <span>luas cheias</span>
+                <small>uma a cada 29,5 dias</small>
+              </li>
+              <li class="stat">
+                <strong id="statNatais">0</strong>
+                <span>natais</span>
+                <small>25 de dezembro</small>
+              </li>
+              <li class="stat">
+                <strong id="statLove">0</strong>
+                <span id="statLoveLabel"></span>
+                <small id="statLoveWhen"></small>
+              </li>
+              <li class="stat">
+                <strong id="statWeekends">0</strong>
+                <span>finais de semana</span>
+                <small>sábado e domingo</small>
+              </li>
+            </ul>
+            <div class="totals" id="totals">
+              <p class="total"><b id="totalHoursLine"></b><em id="totalHoursWords"></em></p>
+              <p class="total"><b id="totalMinutesLine"></b><em id="totalMinutesWords"></em></p>
+              <p class="total"><b id="totalSecondsLine"></b><em id="totalSecondsWords"></em></p>
+              <p class="total"><b id="totalBeatsLine"></b><em>Juntos, para todo o sempre</em></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section carta" id="carta">
+          <div class="section-head">
+            <p class="eyebrow">Do meu peito para o teu</p>
+            <h2>Uma carta para a minha Madame</h2>
+          </div>
+          <article class="letter">
+            <p class="letter-open">Madame, minha gostosa,</p>
+            <p>
+              Fiz esta página para te lembrar de uma coisa simples, mas enorme:
+              eu sou grato por nós. Grato por cada conversa, cada abraço, cada risada
+              e por esse jeito tão teu de tornar a minha vida mais bonita.
+            </p>
+            <p>
+              Tu és o meu encaixe: a pessoa com quem posso ser eu mesmo, rir das coisas
+              mais absurdas e encontrar paz até nos dias em que dizes que estás sempre
+              com dores. Kkkkk. Amo a tua força, a tua doçura e tudo aquilo que faz de ti
+              a mulher que eu escolhi.
+            </p>
+            <p>
+              Quero continuar a construir contigo uma relação mais forte, presente e bonita.
+              Não apenas nos momentos perfeitos, mas também nos dias comuns, nos planos
+              pequenos, nas conversas difíceis e em todos os futuros que ainda vamos viver.
+            </p>
+            <p>
+              Eu escolho-te todos os dias. Escolho cuidar de nós, aprender contigo,
+              celebrar as nossas vitórias e segurar a tua mão em cada nova etapa.
+              Obrigado por seres a minha pessoa e por fazeres deste “nós” o meu lugar
+              favorito.
+            </p>
+            <p class="letter-close">
+              Com todo o meu amor,<br />
+              <span class="script" id="signName">Nilton</span>
+            </p>
+          </article>
+        </section>
+
+        <section class="section fotos" id="fotos">
+          <div class="section-head">
+            <p class="eyebrow">A nossa galeria</p>
+            <h2>Nós, em fotografias</h2>
+            <p class="gallery-date" id="galleryDate"></p>
+          </div>
+          <div class="tj-gallery" id="gallery">
+            <div class="tj-empty" id="galleryEmpty">
+              <p>♥</p>
+              <p>As fotos aparecem aqui</p>
+            </div>
+            <div class="tj-track" id="galleryTrack"></div>
+          </div>
+        </section>
+
+        <section class="section razoes" id="razoes">
+          <div class="section-head">
+            <p class="eyebrow">Há mil motivos</p>
+            <h2>Porque te amo</h2>
+          </div>
+          <ol class="reasons" id="reasons"></ol>
+        </section>
+
+        <div class="split">
+          <section class="section timeline-wrap" id="historia">
+            <div class="section-head">
+              <p class="eyebrow">Os capítulos que já escrevemos</p>
+              <h2>O nosso caminho</h2>
+            </div>
+            <ol class="timeline" id="timeline"></ol>
+          </section>
+
+          <section class="section bodas" id="bodas">
+            <div class="section-head">
+              <p class="eyebrow">Papel, prata, ouro</p>
+              <h2>As nossas bodas</h2>
+            </div>
+            <div class="boda-card" id="bodaCard">
+              <p class="eyebrow" id="bodaEyebrow"></p>
+              <strong id="bodaTitle"></strong>
+              <p id="bodaText"></p>
+              <p class="tiny" id="bodaTiny" hidden></p>
+            </div>
+          </section>
+        </div>
+
+        <section class="section promessas" id="promessas">
+          <div class="section-head">
+            <p class="eyebrow">Daqui para a frente</p>
+            <h2>O que eu te prometo</h2>
+          </div>
+          <ul class="promises" id="promises"></ul>
+        </section>
+
+        <section class="section perdoa" id="amor">
+          <div class="section-head">
+            <p class="eyebrow">A pergunta que importa</p>
+            <h2>Ainda me amas, Madame?</h2>
+            <p class="lede">Eu amo-te mais do que consigo explicar — e escolho continuar a cuidar de nós.</p>
+          </div>
+          <div class="forgive-box">
+            <button type="button" class="btn btn-gold" id="yesBtn">Amo-te muito</button>
+            <div class="no-arena" id="noArena">
+              <button type="button" class="btn btn-ghost" id="noBtn">Mais do que imaginas</button>
+            </div>
+          </div>
+          <p class="forgive-msg" id="forgiveMsg" hidden>
+            Então fica mais um bocadinho — ainda temos uma vida inteira para construir.
+            <span class="script">Eu amo-te, Madame.</span>
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <p>Feito com o coração, para <span id="footerHer"></span>.</p>
+      </footer>
+    </div>
+
+    <audio id="bgMusic" loop preload="auto"></audio>
+    <audio id="forgiveMusic" loop preload="auto"></audio>
+
+    <script src="js/config.js"></script>
+    <script src="js/site.js"></script>
+  </body>
+</html>
