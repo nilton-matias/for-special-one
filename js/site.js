@@ -434,6 +434,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function setupForgive(musicPlayer) {
     const yesBtn = byId("yesBtn");
     const noBtn = byId("noBtn");
+    const noArena = byId("noArena");
     let accepted = false;
 
     function acceptLove(event) {
@@ -446,8 +447,22 @@ document.addEventListener("DOMContentLoaded", function () {
       burstHearts();
     }
 
+    function escapeNoLove(event) {
+      event.preventDefault();
+      noBtn.classList.add("is-fleeing");
+
+      const arenaRect = noArena.getBoundingClientRect();
+      const buttonRect = noBtn.getBoundingClientRect();
+      const maxLeft = Math.max(0, arenaRect.width - buttonRect.width);
+      const maxTop = Math.max(0, arenaRect.height - buttonRect.height);
+
+      noBtn.style.left = Math.random() * maxLeft + "px";
+      noBtn.style.top = Math.random() * maxTop + "px";
+    }
+
     yesBtn.addEventListener("click", acceptLove);
-    noBtn.addEventListener("click", acceptLove);
+    noBtn.addEventListener("pointerenter", escapeNoLove);
+    noBtn.addEventListener("click", escapeNoLove);
   }
 
   function setupPetals() {

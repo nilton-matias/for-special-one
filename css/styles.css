@@ -538,6 +538,11 @@ h2 {
   touch-action: none;
 }
 
+#noBtn:hover,
+#noBtn:active {
+  transform: none;
+}
+
 #noBtn.is-fleeing {
   position: absolute;
   margin: 0;
